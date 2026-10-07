@@ -10,7 +10,7 @@ An embedded desk clock and ambient environmental monitor engineered for the ESP3
 * Display: 2.9-inch SPI E-Paper / E-Ink panel
 * Sensors: 
   * SHT30: Precision digital temperature and relative humidity sensor
-  * SGP30: Multi-pixel gas sensor for Indoor Air Quality (eCO2 and TVOC)
+  * SGP40: Gas sensor for Indoor Air Quality (VOC & NOx)
 * User Input: 3-button physical navigation interface (Up, Select, Down)
 * Audio Output: Passive buzzer
 * Charging: Integrated Li-Po battery management via TP4056 charging module
@@ -36,17 +36,13 @@ An embedded desk clock and ambient environmental monitor engineered for the ESP3
 * Meteorological Engine: Polls hourly forecast endpoints from Open-Meteo using non-blocking state progression.
 * Network Time Protocol (NTP): Periodically aligns the ESP32 hardware real-time clock to atomic UTC pools with automatic POSIX timezone and daylight saving rules.
 
----
-
-## To Be Added
-
 ### WS2812B Dynamic LED Strip
 * Dynamic lighting based on weather and daytime.
 * Turns on only when charging to keep the power draw as low as possible.
 
 ### Deep Sleep & Battery Management
-* The device returns from sleep whenever something on the screen needs to be refreshed or an alarm/timer is triggered.
-* Battery percentage will be displayed on all the pages.
+* The device wakes from sleep whenever something on the screen needs to be refreshed or an alarm/timer is triggered.
+* Battery percentage is displayed on all the pages.
 
 ---
 
